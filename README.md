@@ -1,2 +1,4 @@
 # .emacs.d
-Emacs Configuration
+
+## Configurations
+Top level configs can be changed in 'config.el'.

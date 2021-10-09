@@ -1,0 +1,67 @@
+#!/bin/sh
+
+### build-emacs
+
+## Copyright (C) 2021 Austin Sievert
+
+## Author: Austin Sievert <Arsievert1@gmail.com>
+## URL: https://github.com/Arsievert1/.emacs.d
+
+## This program is free software: you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation, either version 3 of the License, or
+## (at your option) any later version.
+##
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+##
+## You should have received a copy of the GNU General Public License
+## along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+### Commentary:
+
+## Script to clone and install emacs from source.
+## Assumes necessary libraries for compilation are already installed.
+
+### Code:
+
+clone() {
+    git clone git://git.savannah.gnu.org/emacs.git
+}
+
+configure() {
+    sudo ./autogen.sh
+    sudo ./configure -with-native-compilation
+}
+
+install() {
+    sudo make
+    sudo make install
+}
+
+uninstall() {
+    make clean
+    sudo make uninstall
+}
+
+pull() {
+    git pull
+}
+
+if command -v emacs 2>/dev/null; then
+    # emacs is installed;
+    cd ~/emacs/
+    pull
+    uninstall
+    install
+else
+    # emacs is not installed;
+    clone
+    cd ~/emacs/
+    configure
+    install
+fi
+
+cd ~/

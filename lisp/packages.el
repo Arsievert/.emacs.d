@@ -25,6 +25,8 @@
 ;;; Code:
 
 ;; Bootstrap Straight.el
+;; Author: Radon Rosborough
+;; URL: https://github.com/raxod502/straight.el
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))

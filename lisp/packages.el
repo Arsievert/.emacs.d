@@ -43,6 +43,16 @@
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
 
+(use-package org
+  :config
+  ;; Allow execution of code snippets.
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((C      . t)
+     (lua    . t)
+     (java   . t)
+     (python . t))))
+
 (use-package magit
   :config
   (setq magit-ediff-dwim-show-on-hunks t)

@@ -42,8 +42,8 @@
 (setq visible-bell 1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(scroll-bar-mode -1)
-(fringe-mode -1)
+(if (not (eq system-type 'darwin))
+    ((scroll-bar-mode -1) (fringe-mode -1)))
 
 (setq x-select-enable-clipboard t)
 (setq x-underline-at-descent-line t)

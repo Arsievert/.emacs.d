@@ -47,7 +47,7 @@
 (setq x-underline-at-descent-line t)
 
 ;; Terminal mouse support.
-(xterm-mouse-mode t)
+(xterm-mouse-mode terminal-mouse)
 
 ;; Smooth Scrolling
 (setq scroll-margin 0

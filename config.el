@@ -41,6 +41,11 @@
 ;; Faces used when using GUI Emacs.
 (setq font "Fantasque Sans Mono")
 
+;; Terminal-Mouse
+;; 1 - enable xterm mouse support.
+;; 0 - disable xterm mouse support.
+(setq terminal-mouse 0)
+
 ;; Whitespace-Cleanup:
 ;; 't - remove trailing whitespace automatically.
 ;; 'nil - do not remove trailing whitespace.

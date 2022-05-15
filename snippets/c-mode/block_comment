@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: block_comment
+# key: block_comment
+# --
+/* ${1: new block}
+ *
+ */

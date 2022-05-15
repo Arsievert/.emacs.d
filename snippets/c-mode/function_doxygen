@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: function_doxygen
+# key: function_doxygen
+# --
+/**
+ * @fn ${1: function name}
+ * @brief ${2: short description}
+ *
+ * @note ${3: detailed description}
+ *
+ * @param[${4:in/out}] ${5:param name}
+ * @return ${6:return type}
+ */

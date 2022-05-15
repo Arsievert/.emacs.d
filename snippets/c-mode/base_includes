@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: base_includes
+# key: base_includes
+# --
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>

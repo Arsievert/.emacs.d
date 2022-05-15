@@ -91,12 +91,6 @@
   :config
   (add-to-list 'company-backends 'company-etags))
 
-(use-package projectile
-  :diminish projectile-mode
-  :config
-  (projectile-mode)
-  (setq projectile-completion-system 'ivy))
-
 (use-package evil
   :init
   (evil-mode 1))

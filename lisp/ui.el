@@ -73,39 +73,3 @@
   (when (or (display-graphic-p) (daemonp))
     (setq doom-modeline-icon t)
     (setq doom-modeline-major-mode-icon t)))
-
-(use-package dashboard
-  :init
-  (dashboard-setup-startup-hook)
-  :bind
-  (:map dashboard-mode-map
-        ("<down-mouse-1>" . nil)
-        ("<mouse-1>" . widget-button-click)
-        ("<mouse-2>" . widget-button-click))
-  :config
-  (setq dashboard-set-init-info t)
-  (setq dashboard-set-heading-icons t)
-  (setq dashboard-set-file-icons t)
-  (setq dashboard-center-content t)
-  (setq dashboard-startup-banner 'logo)
-  (setq dashboard-banner-logo-title "Emacs")
-  (setq dashboard-items '((recents  . 5)
-                          (projects . 5)))
-  (setq dashboard-set-navigator t)
-  (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
-  (setq dashboard-navigator-buttons
-        `(((,(when (display-graphic-p)
-               (all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0))
-            "Homepage"
-            "Visit Emacs Home"
-            (lambda (&rest _) (browse-url "https://www.gnu.org/software/emacs/")))
-           (,(when (display-graphic-p)
-               (all-the-icons-octicon "archive" :height 1.1 :v-adjust 0.0))
-            "Update Emacs"
-            "Update Emacs"
-            (lambda (&rest _) (update-emacs)))
-           (,(when (display-graphic-p)
-               (all-the-icons-faicon "repo-pull" :height 1.1 :v-adjust 0.0))
-            "Update Packages"
-            "Update Packages"
-            (lambda (&rest _) (straight-normalize-all)))))))

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: header_defines
+# key: header_defines
+# --
+#ifndef ${1:FILE}_H
+#define $1_H
+
+$0
+
+#endif $1_H

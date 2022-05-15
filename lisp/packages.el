@@ -119,6 +119,15 @@
   :init
   (cscope-setup))
 
+(use-package yasnippet
+  :init
+  (yas-global-mode 1)
+  :bind
+  (;; Rebind important yasnippet actions
+   ("C-c y i" . yas-insert-snippet)
+   ("C-c y n" . yas-new-snippet)
+   ("C-c y v" . yas-visit-snippet-file)))
+
 (use-package display-line-numbers
   :ensure nil
   :hook (prog-mode . display-line-numbers-mode))

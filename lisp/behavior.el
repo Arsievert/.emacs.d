@@ -38,11 +38,6 @@
 
 (add-hook 'after-make-frame-functions 'new-frame-config)
 
-;; Remove unecessary window elements
-(setq visible-bell 1)
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-
 (setq x-select-enable-clipboard t)
 (setq x-underline-at-descent-line t)
 

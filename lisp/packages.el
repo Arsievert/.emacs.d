@@ -113,7 +113,7 @@
 
   ;; C function highlighting.
   (font-lock-add-keywords 'c-mode
-                          '(("\\<\\([a-zA-Z_]*\\)(" 1 font-lock-function-name-face))))
+                          '(("\\<\\([a-z0-9A-Z_]*\\)(" 1 font-lock-function-name-face))))
 
 (use-package xcscope
   :init

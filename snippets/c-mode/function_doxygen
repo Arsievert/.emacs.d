@@ -6,8 +6,9 @@
  * @fn ${1: function name}
  * @brief ${2: short description}
  *
- * @note ${3: detailed description}
+ * @note
+ * ${3: detailed description}
  *
- * @param[${4:in/out}] ${5:param name}
- * @return ${6:return type}
+ * @param[${4:in/out}] ${5:param name} ${6:param description}
+ * @return ${7:return type}
  */

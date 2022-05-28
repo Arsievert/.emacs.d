@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: meeting_minutes
+# key: meeting
+# --
+* Meeting Minutes (${1:`(format-time-string "%a %B %d %Y - %l:%M%p")`})
+** Objective
+${2: What's being discussed?}
+** Notes
+$3
+** Actions

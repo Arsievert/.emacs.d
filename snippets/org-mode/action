@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: action_item
+# key: --
+# --
+- [ ] (${1:Owner}) ${2:Action} | Created: ${3:`(format-time-string "%D")`} | Due: $4

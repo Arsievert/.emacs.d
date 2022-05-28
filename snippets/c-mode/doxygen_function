@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: function_doxygen
-# key: function_doxygen
+# name: Doxygen Function Description
+# key: @fn
 # --
 /**
  * @fn ${1: function name}

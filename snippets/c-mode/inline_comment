@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: inline_comment
-# key: inline_comment
-# --
-/* ${1: new comment} */

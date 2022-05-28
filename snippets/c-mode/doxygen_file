@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: file_doxygen
-# key: file_doxygen
+# name: Doxygen File Description
+# key: @file
 # --
 /**
  * @file ${1:`(file-name-nondirectory(buffer-file-name))`}

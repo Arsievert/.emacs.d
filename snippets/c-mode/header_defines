@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: header_defines
-# key: header_defines
+# name: ifndef
+# key: #ifndef
 # --
 #ifndef ${1:FILE}_H
 #define $1_H

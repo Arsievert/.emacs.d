@@ -50,7 +50,6 @@
    'org-babel-load-languages
    '((C      . t)
      (lua    . t)
-     (java   . t)
      (python . t))))
 
 (use-package magit

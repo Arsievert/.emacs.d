@@ -2,4 +2,4 @@
 # name: action_item
 # key: --
 # --
-- [ ] (${1:Owner}) ${2:Action} | Created: ${3:`(format-time-string "%D")`} | Due: $4
+- [ ] (${1:Owner}) | Created: ${2:`(format-time-string "%m/%d")`} | Due: ${3:N/A} | ${4:Action}

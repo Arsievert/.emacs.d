@@ -106,10 +106,6 @@
                      (setq tab-width 4)
                      (setq c-basic-offset 4)))
   :config
-  (use-package modern-cpp-font-lock
-    :diminish
-    :init (modern-c++-font-lock-global-mode t))
-
   ;; C function highlighting.
   (font-lock-add-keywords 'c-mode
                           '(("\\<\\([a-z0-9A-Z_]*\\)(" 1 font-lock-function-name-face))))

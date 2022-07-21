@@ -24,12 +24,6 @@
 
 ;;; Code:
 
-(defun reload-config()
-  "Reload emacs configuration"
-  (interactive)
-  (load-file user-init-file)
-  (mapc 'load-file (file-expand-wildcards "~/.emacs.d/lisp/*")))
-
 (defun refresh-buffer()
   "Revert buffer without confirmation"
   (interactive)
@@ -40,36 +34,17 @@
   (interactive)
   (mapc 'kill-buffer (buffer-list)))
 
-(defun save-all-buffers ()
-  "Save all buffers."
-  (interactive)
-  (mapc 'save-buffer (buffer-list)))
-
 (defun dos2unix ()
   "Swap line endings (dos->unix)"
   (interactive)
   (set-buffer-file-coding-system 'unix)
   (save-buffer))
 
-(defun dos2unix_project ()
-  "Swap line endings (dos->unix) for an entire project."
-  (interactive)
-  ;; Configure directory to root of project
-  (let ((default-directory(locate-dominating-file "." ".git")))
-    (shell-command "find . -type f -iname \"*.[ch]\" -print0 | xargs -0 dos2unix --")))
-
 (defun unix2dos ()
   "Swap line endings (unix->dos)"
   (interactive)
   (set-buffer-file-coding-system 'dos)
   (save-buffer))
-
-(defun unix2dos_project ()
-  "Swap line endings (unix->dos) for an entire project."
-  (interactive)
-  ;; Configure directory to root of project
-  (let ((default-directory(locate-dominating-file "." ".git")))
-    (shell-command "find . -type f -iname \"*.[ch]\" -print0 | xargs -0 unix2dos --")))
 
 (defun find-tags ()
   "Find tags table for current git repository"

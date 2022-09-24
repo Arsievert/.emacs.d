@@ -25,7 +25,7 @@
 ;;; Code:
 
 ;; Remove unecessary window elements
-(setq visible-bell 1)
+(setq visible-bell nil)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 

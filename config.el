@@ -41,6 +41,10 @@
 ;; Faces used when using GUI Emacs.
 (setq font "Fantasque Sans Mono")
 
+;; Font-Height:
+;; Font size used when using GUI Emacs.
+(setq font-height 130)
+
 ;; Terminal-Mouse
 ;; 1 - enable xterm mouse support.
 ;; 0 - disable xterm mouse support.

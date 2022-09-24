@@ -35,7 +35,7 @@
 
 ;; GUI-Theme:
 ;; Selected color scheme when using GUI Emacs.
-(setq gui-theme 'doom-solarized-dark)
+(setq gui-theme 'doom-gruvbox)
 
 ;; Font:
 ;; Faces used when using GUI Emacs.

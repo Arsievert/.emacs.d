@@ -60,6 +60,9 @@
 ;; Prevent tabs at the beginning of lines
 (setq-default indent-tabs-mode nil)
 
+;; Disable Visual Bell
+(setq visible-bell nil)
+
 ;;Trailing Whitepsace
 (setq-default show-trailing-whitespace nil)
 (if whitespace-cleanup

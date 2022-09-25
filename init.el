@@ -30,12 +30,15 @@
 ;; Load Configurations
 (load (concat user-emacs-directory "config"))
 
-;; Load modules
+;; Load base modules
 (load (concat user-emacs-directory "custom"))
 (load (concat user-emacs-directory "lisp/packages"))
 (load (concat user-emacs-directory "lisp/ui"))
 (load (concat user-emacs-directory "lisp/behavior"))
 (load (concat user-emacs-directory "lisp/qol"))
+
+;; Load custom modules
+(mapc 'load (file-expand-wildcards custom-modules))
 
 ;; Restore garbage collection to sane value.
 (setq gc-cons-threshold 16777216) ;16mb

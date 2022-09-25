@@ -54,3 +54,8 @@
 ;; 't - remove trailing whitespace automatically.
 ;; 'nil - do not remove trailing whitespace.
 (setq whitespace-cleanup 't)
+
+;; Custom Modules
+;; Directory or file which contains additional elisp configurations.
+;; Wildcard can be used to load multiple files within a directory.
+(setq custom-modules "")

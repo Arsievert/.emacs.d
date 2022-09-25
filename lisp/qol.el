@@ -29,11 +29,6 @@
   (interactive)
   (revert-buffer :ignore :noconfirm))
 
-(defun kill-all-buffers ()
-  "Kill all buffers."
-  (interactive)
-  (mapc 'kill-buffer (buffer-list)))
-
 (defun dos2unix ()
   "Swap line endings (dos->unix)"
   (interactive)

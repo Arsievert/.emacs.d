@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: html_options
+# key: html_options
+# --
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+OPTIONS: html-postamble:nil

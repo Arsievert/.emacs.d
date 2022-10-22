@@ -65,5 +65,4 @@
 
 ;;Trailing Whitepsace
 (setq-default show-trailing-whitespace nil)
-(if whitespace-cleanup
-    (add-hook 'before-save-hook 'delete-trailing-whitespace))
+(if whitespace-cleanup (add-hook 'before-save-hook 'delete-trailing-whitespace))

@@ -43,7 +43,7 @@
 
 ;; Font-Height:
 ;; Font size used when using GUI Emacs.
-(setq font-height 130)
+(setq font-height 135)
 
 ;; Terminal-Mouse
 ;; 1 - enable xterm mouse support.

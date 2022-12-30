@@ -99,8 +99,6 @@
   (which-key-mode 1))
 
 (use-package cc-mode
-  :init
-  (add-hook 'c-mode-hook 'find-tags)
   :ensure nil
   :hook
   (c-mode-common . (lambda ()

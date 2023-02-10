@@ -78,7 +78,8 @@
    ("C-c j" . counsel-git-grep) ;;project wide grep
    ("C-c k" . counsel-ag)
    ("C-c f" . counsel-fzf)
-   ("C-x l" . counsel-locate))
+   ("C-x l" . counsel-locate)
+   ("C-x b" . counsel-switch-buffer))
   :config
   ;; Tramp ivy interface
   (use-package counsel-tramp

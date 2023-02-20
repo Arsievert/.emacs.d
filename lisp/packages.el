@@ -93,7 +93,9 @@
 
 (use-package evil
   :init
-  (evil-mode 1))
+  (evil-mode 1)
+  :config
+  (setq evil-indent-convert-tabs nil))
 
 (use-package which-key
   :init

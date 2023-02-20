@@ -24,6 +24,17 @@
 
 ;;; Code:
 
+;; Language Support
+;;; C
+(setq c 't)
+;;; Rust
+(setq rust 't)
+
+;; LSP
+;; 't - load LSP package(s)
+;; 'nil - omit LSP package(s)
+(setq lsp-support 't)
+
 ;; Terminal-Theme:
 ;; Selected color scheme using Terminal Emacs.
 (setq terminal-theme 'modus-vivendi)

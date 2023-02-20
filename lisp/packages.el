@@ -99,22 +99,6 @@
   :init
   (which-key-mode 1))
 
-(use-package cc-mode
-  :ensure nil
-  :hook
-  (c-mode-common . (lambda ()
-                     (c-set-style "linux")
-                     (setq tab-width 4)
-                     (setq c-basic-offset 4)))
-  :config
-  ;; C function highlighting.
-  (font-lock-add-keywords 'c-mode
-                          '(("\\<\\([a-z0-9A-Z_]*\\)(" 1 font-lock-function-name-face))))
-
-(use-package xcscope
-  :init
-  (cscope-setup))
-
 (use-package yasnippet
   :init
   (yas-global-mode 1)

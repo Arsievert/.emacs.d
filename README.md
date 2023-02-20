@@ -2,3 +2,8 @@
 
 ## Configurations
 Top level configs can be changed in 'config.el'.
+
+## Install
+### Rust
+    - M-x lsp-install-server -> Rust-Analyzer
+    - M-x dap-cpptools-setup

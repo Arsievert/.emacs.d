@@ -26,36 +26,36 @@
 
 (if c
     (list (use-package cc-mode
-	    :ensure nil
-	    :hook
-	    (c-mode-common . (lambda ()
+            :ensure nil
+            :hook
+            (c-mode-common . (lambda ()
                                (c-set-style "linux")
                                (setq tab-width 4)
                                (setq c-basic-offset 4)
                                (setq indent-tabs-mode nil)))
-	    :config
-	    ;; C function highlighting.
-	    (font-lock-add-keywords 'c-mode
-				    '(("\\<\\([a-z0-9A-Z_]*\\)(" 1 font-lock-function-name-face))))
+            :config
+            ;; C function highlighting.
+            (font-lock-add-keywords 'c-mode
+                                    '(("\\<\\([a-z0-9A-Z_]*\\)(" 1 font-lock-function-name-face))))
 
           (use-package xcscope
-	    :init
-	    (cscope-setup))))
+            :init
+            (cscope-setup))))
 
 (if rust
     (use-package rustic))
 
 (if lsp-support
     (list (use-package lsp-mode
-	    :config
-	    (use-package lsp-ui)
-	    (if rust
+            :config
+            (use-package lsp-ui)
+            (if rust
                 ;; Configure LSP::Rust debugger.
                 (setq lsp-rust-analyzer-debug-lens-extra-dap-args
                       (list :MIMode "lldb"
-			    :MIDebuggerPath: "rust-lldb"))))
+                            :MIDebuggerPath: "rust-lldb"))))
           (use-package dap-mode
-	    :config
-	    (dap-mode 1)
-	    (require 'dap-cpptools)
-	    (require 'dap-lldb))))
+            :config
+            (dap-mode 1)
+            (require 'dap-cpptools)
+            (require 'dap-lldb))))

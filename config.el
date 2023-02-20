@@ -1,6 +1,6 @@
 ;;; config.el    -*- lexical-binding: t -*-
 
-;; Copyright (C) 2021-2022 Austin Sievert
+;; Copyright (C) 2021-2023 Austin Sievert
 
 ;; Author: Austin Sievert <Arsievert1@gmail.com>
 ;; URL: https://github.com/Arsievert1/.emacs.d

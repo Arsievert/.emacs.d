@@ -112,7 +112,9 @@
 
 (use-package display-line-numbers
   :ensure nil
-  :hook (prog-mode . display-line-numbers-mode))
+  :hook (prog-mode . display-line-numbers-mode)
+  :init
+  (column-number-mode 1))
 
 (use-package server
   :ensure nil

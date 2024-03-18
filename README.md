@@ -7,7 +7,6 @@ Top level configs can be changed in 'config.el'.
 ### Fonts
 - Nerd Fonts
 https://github.com/ryanoasis/nerd-fonts/releases
-
 - M-x all-the-icons-install-fonts
 
 

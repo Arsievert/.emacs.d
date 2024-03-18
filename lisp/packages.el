@@ -85,11 +85,11 @@
   (use-package counsel-tramp
     :bind (("C-c t" . counsel-tramp))))
 
-(use-package company
+(use-package corfu
+  :custom
+  (corfu-auto t)
   :init
-  (add-hook 'after-init-hook 'global-company-mode)
-  :config
-  (add-to-list 'company-backends 'company-etags))
+  (global-corfu-mode))
 
 (use-package evil
   :init

@@ -42,4 +42,4 @@
   (cscope-setup))
 
 ;; Rust packages and configurations
-(use-package rustic)
+(use-package rust-mode)

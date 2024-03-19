@@ -3,7 +3,7 @@
 ;; Copyright (C) 2021-2024 Austin Sievert
 
 ;; Author: Austin Sievert <Arsievert1@gmail.com>
-;; URL: https://github.com/Arsievert1/.emacs.d
+;; URL: https://github.com/Arsievert/.emacs.d
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

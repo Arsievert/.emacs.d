@@ -31,22 +31,9 @@
 
 (setq inhibit-splash-screen 't)
 
-(use-package all-the-icons)
-
-(use-package ivy-rich
-  :init
-  (ivy-rich-mode t)
-  ;; Patch for bug related to "Not a Directory".
-  ;; Author: BlindingDark
-  ;; URL: https://github.com/Yevgnen/ivy-rich/issues/115
-  (defun ivy-rich--switch-buffer-directory! (orig-fun &rest args)
-         (cl-letf (((symbol-function 'directory-file-name) #'file-name-directory))
-           (apply orig-fun args)))
-  (advice-add 'ivy-rich--switch-buffer-directory :around #'ivy-rich--switch-buffer-directory!))
-
-(use-package all-the-icons-ivy-rich
-  :init
-  (all-the-icons-ivy-rich-mode t))
+(use-package nerd-icons-completion
+  :when (or (display-graphic-p) (daemonp))
+  :hook (vertico-mode . nerd-icons-completion-mode))
 
 (use-package doom-themes
   :init

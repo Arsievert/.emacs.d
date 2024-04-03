@@ -60,7 +60,10 @@
 
 (use-package vertico
   :init (vertico-mode)
-  :hook (rfn-eshadow-update-overlay . vertico-directory-tidy))
+  :hook (rfn-eshadow-update-overlay . vertico-directory-tidy)
+  :bind (:map vertico-map
+              ("RET" . vertico-directory-enter)
+              ("DEL" . vertico-directory-delete-word)))
 
 (use-package marginalia
   :init (marginalia-mode))

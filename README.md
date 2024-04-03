@@ -6,8 +6,9 @@ Top level configs can be changed in 'config.el'.
 ## Installation Help
 ### Fonts
 - Nerd Fonts
-https://github.com/ryanoasis/nerd-fonts/releases
-- M-x all-the-icons-install-fonts
+ - https://github.com/ryanoasis/nerd-fonts/releases
+- Fantasque Sans Mono
+ - https://github.com/belluzj/fantasque-sans/releases
 
 ### MacOS
 - brew tap d12frosted/emacs-plus

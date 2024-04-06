@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; Language specific package installation and settings.
+;; Language/LSP specific package installation and settings.
 
 ;;; Code:
 
@@ -43,3 +43,7 @@
 
 ;; Rust packages and configurations
 (use-package rust-mode)
+
+(use-package eldoc-box
+  :init
+  (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t))

@@ -107,9 +107,9 @@
    ("M-s d" . consult-find)                  ;; Alternative: consult-fd
    ("M-s c" . consult-locate)
    ("C-c g" . consult-grep)
-   ("C-c j" . consult-git-grep)
-   ("M-s r" . consult-ripgrep)
-   ("M-s l" . consult-line)
+   ("C-c j" . consult-ripgrep)
+   ("M-s r" . consult-git-grep)
+   ("C-s"   . consult-line)
    ("M-s L" . consult-line-multi)
    ("M-s k" . consult-keep-lines)
    ("M-s u" . consult-focus-lines)

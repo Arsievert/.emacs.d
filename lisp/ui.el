@@ -32,10 +32,12 @@
 (setq inhibit-splash-screen 't)
 
 (use-package nerd-icons-completion
+  :ensure t
   :when (or (display-graphic-p) (daemonp))
   :hook (vertico-mode . nerd-icons-completion-mode))
 
 (use-package doom-themes
+  :ensure t
   :init
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t)
@@ -46,9 +48,9 @@
       (load-theme terminal-theme t)))
 
 (use-package doom-modeline
-  :hook
-  (after-init . doom-modeline-mode)
+  :ensure t
   :init
+  (doom-modeline-mode)
   (unless after-init-time
     (setq doom-modeline--old-format mode-line-format)
     (setq-default mode-line-format nil))

@@ -38,12 +38,15 @@
   (font-lock-add-keywords 'c-mode
                           '(("\\<\\([a-z0-9A-Z_]*\\)(" 1 font-lock-function-name-face))))
 (use-package xcscope
+  :ensure t
   :init
   (cscope-setup))
 
 ;; Rust packages and configurations
-(use-package rust-mode)
+(use-package rust-mode
+  :ensure t)
 
 (use-package eldoc-box
+  :ensure t
   :init
   (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t))

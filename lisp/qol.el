@@ -46,8 +46,7 @@
   (interactive)
   ;; Configure directory to root of project
   (let ((default-directory(locate-dominating-file "." ".git")))
-    (let ((tags-revert-without-query t))
-      (visit-tags-table "TAGS"))))
+    (visit-tags-table "TAGS")))
 
 (defun ets ()
   "Create etags and cscope files"
@@ -55,9 +54,7 @@
   ;; Configure directory to root of project
   (let ((default-directory(locate-dominating-file "." ".git")))
     (with-current-buffer (get-buffer-create "*output*") (erase-buffer))
-    (call-process-shell-command "find . -type f -iname \"*.[ch]\" | etags -;
-                                 cscope -Rbquv;
-                                 find . -type f -iname \"*.[ch]\" > cscope.files;")
+    (call-process-shell-command "find . -type f -iname \"*.[ch]\" | etags -;")
     (find-tags)))
 
 (defun update-emacs ()

@@ -63,6 +63,9 @@
 ;; Disable Visual Bell
 (setq visible-bell nil)
 
+;; Don't prompt when changing TAGS files.
+(setq tags-revert-without-query t)
+
 ;;Trailing Whitepsace
 (setq-default show-trailing-whitespace nil)
 (if whitespace-cleanup (add-hook 'before-save-hook 'delete-trailing-whitespace))

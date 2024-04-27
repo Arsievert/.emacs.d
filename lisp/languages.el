@@ -37,10 +37,6 @@
   ;; C function highlighting.
   (font-lock-add-keywords 'c-mode
                           '(("\\<\\([a-z0-9A-Z_]*\\)(" 1 font-lock-function-name-face))))
-(use-package xcscope
-  :ensure t
-  :init
-  (cscope-setup))
 
 ;; Rust packages and configurations
 (use-package rust-mode

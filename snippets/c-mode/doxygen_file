@@ -5,5 +5,10 @@
 /**
  * @file ${1:`(file-name-nondirectory(buffer-file-name))`}
  * @brief ${2: short description}
- *
+ * @defgroup ${3:`(upcase (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`}
+ * {@
  */
+
+$0
+
+/** @} */

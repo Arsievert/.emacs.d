@@ -3,12 +3,11 @@
 # key: @fn
 # --
 /**
- * @fn ${1: function name}
- * @brief ${2: short description}
+ * @brief ${1: short description}
  *
  * @note
- * ${3: detailed description}
+ * ${2: detailed description}
  *
- * @param[${4:in/out}] ${5:param name} ${6:param description}
- * @return ${7:return type}
+ * @param[${3:in,out}] ${4:param_name} ${5:param_description}
+ * @retval ${6:value}
  */

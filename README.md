@@ -15,3 +15,4 @@ Top level configs can be changed in 'config.el'.
 - brew install emacs-plus@29 --with-ctags --with-native-comp
 - brew install basictex
 - brew install texlive
+- brew install ispell

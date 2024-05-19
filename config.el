@@ -26,7 +26,7 @@
 
 ;; Terminal-Theme:
 ;; Selected color scheme using Terminal Emacs.
-(setq terminal-theme 'modus-vivendi)
+(setq terminal-theme 'doom-gruvbox)
 
 ;; Terminal-Use-Theme-Background:
 ;; 't - use background color as specified by selected terminal theme.

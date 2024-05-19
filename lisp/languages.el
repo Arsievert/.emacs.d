@@ -41,8 +41,3 @@
 ;; Rust packages and configurations
 (use-package rust-mode
   :ensure t)
-
-(use-package eldoc-box
-  :ensure t
-  :init
-  (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t))

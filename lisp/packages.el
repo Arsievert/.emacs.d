@@ -256,6 +256,11 @@
 (use-package htmlize
   :ensure t)
 
+(use-package eldoc-box
+  :ensure t
+  :init
+  (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t))
+
 (when (not (or (display-graphic-p) (daemonp)))
   (semantic-mode 1)
   (global-semantic-stickyfunc-mode 1))

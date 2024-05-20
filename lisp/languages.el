@@ -41,3 +41,7 @@
 ;; Rust packages and configurations
 (use-package rust-mode
   :ensure t)
+
+;; Fish shell language
+(use-package fish-mode
+  :ensure t)

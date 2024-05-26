@@ -82,6 +82,9 @@
   (setq ediff-split-window-function 'split-window-horizontally)
   :bind (("C-x g" . magit-status)))
 
+(use-package transient
+  :ensure t)
+
 (use-package vertico
   :ensure t
   :init (vertico-mode)

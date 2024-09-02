@@ -12,7 +12,7 @@ Top level configs can be changed in 'config.el'.
 
 ### MacOS
 - brew tap d12frosted/emacs-plus
-- brew install emacs-plus@29 --with-ctags --with-native-comp
+- brew install emacs-plus@30 --with-native-comp
 - brew install basictex
 - brew install texlive
 - brew install ispell

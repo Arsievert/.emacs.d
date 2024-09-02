@@ -39,7 +39,8 @@
 (load (concat user-emacs-directory "lisp/qol"))
 
 ;; Load custom modules
-(mapc 'load (file-expand-wildcards custom-modules))
+(if (not (string-empty-p custom-modules))
+    (mapc 'load (file-expand-wildcards custom-modules)))
 
 ;; Restore garbage collection to sane value.
 (setq gc-cons-threshold 16777216) ;16mb

@@ -1,6 +1,6 @@
 ;;; init.el    -*- lexical-binding: t -*-
 
-;; Copyright (C) 2021-2024 Austin Sievert
+;; Copyright (C) 2021-2025 Austin Sievert
 
 ;; Author: Austin Sievert <Arsievert1@gmail.com>
 ;; URL: https://github.com/Arsievert/.emacs.d

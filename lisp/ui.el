@@ -29,7 +29,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(setq inhibit-splash-screen 't)
+(setopt inhibit-splash-screen 't)
 
 (use-package nerd-icons-completion
   :ensure t
@@ -39,7 +39,7 @@
 (use-package doom-themes
   :ensure t
   :init
-  (setq doom-themes-enable-bold t
+  (setopt doom-themes-enable-bold t
         doom-themes-enable-italic t)
   (if (or (display-graphic-p) (daemonp))
       ;; Use gui-theme for GUI.
@@ -52,27 +52,27 @@
   :init
   (doom-modeline-mode)
   (unless after-init-time
-    (setq doom-modeline--old-format mode-line-format)
-    (setq-default mode-line-format nil))
+    (setopt doom-modeline--old-format mode-line-format)
+    (setopt-default mode-line-format nil))
   ;; Properties
-  (setq doom-modeline-major-mode-color-icon t)
-  (setq doom-modeline-buffer-modification-icon t)
-  (setq doom-modeline-minor-modes nil)
-  (setq doom-modeline-enable-word-count nil)
-  (setq doom-modeline-buffer-encoding t)
-  (setq doom-modeline-indent-info nil)
-  (setq doom-modeline-checker-simple-format t)
-  (setq doom-modeline-vcs-max-length 30)
-  (setq doom-modeline-persp-name t)
-  (setq doom-modeline-persp-name-icon t)
-  (setq doom-modeline-lsp t)
-  (setq doom-modeline-github nil)
-  (setq doom-modeline-env-version t)
-  (setq doom-modeline-buffer-file-name-style 'file-name)
-  (setq doom-modeline-before-update-env-hook nil)
-  (setq doom-modeline-after-update-env-hook nil)
+  (setopt doom-modeline-major-mode-color-icon t)
+  (setopt doom-modeline-buffer-modification-icon t)
+  (setopt doom-modeline-minor-modes nil)
+  (setopt doom-modeline-enable-word-count nil)
+  (setopt doom-modeline-buffer-encoding t)
+  (setopt doom-modeline-indent-info nil)
+  (setopt doom-modeline-checker-simple-format t)
+  (setopt doom-modeline-vcs-max-length 30)
+  (setopt doom-modeline-persp-name t)
+  (setopt doom-modeline-persp-name-icon t)
+  (setopt doom-modeline-lsp t)
+  (setopt doom-modeline-github nil)
+  (setopt doom-modeline-env-version t)
+  (setopt doom-modeline-buffer-file-name-style 'file-name)
+  (setopt doom-modeline-before-update-env-hook nil)
+  (setopt doom-modeline-after-update-env-hook nil)
   ;; Don't use icons in terminal mode
-  :config
+  :custom
   (when (or (display-graphic-p) (daemonp))
-    (setq doom-modeline-icon t)
-    (setq doom-modeline-major-mode-icon t)))
+    (doom-modeline-icon t)
+    (doom-modeline-major-mode-icon t)))

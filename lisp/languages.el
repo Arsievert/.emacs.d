@@ -30,9 +30,9 @@
   :hook
   (c-mode-common . (lambda ()
                      (c-set-style "linux")
-                     (setq tab-width 4)
-                     (setq c-basic-offset 4)
-                     (setq indent-tabs-mode nil)))
+                     (setopt tab-width 4)
+                     (setopt c-basic-offset 4)
+                     (setopt indent-tabs-mode nil)))
   :config
   ;; C function highlighting.
   (font-lock-add-keywords 'c-mode

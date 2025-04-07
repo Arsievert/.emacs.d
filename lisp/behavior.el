@@ -38,14 +38,14 @@
 
 (add-hook 'after-make-frame-functions 'new-frame-config)
 
-(setq x-select-enable-clipboard t)
-(setq x-underline-at-descent-line t)
+(setopt x-select-enable-clipboard t)
+(setopt x-underline-at-descent-line t)
 
 ;; Terminal mouse support.
 (xterm-mouse-mode terminal-mouse)
 
 ;; Smooth Scrolling
-(setq scroll-margin 0
+(setopt scroll-margin 0
       scroll-conservatively 10000
       scroll-preserve-screen-position t
       auto-window-vscroll nil)
@@ -55,17 +55,17 @@
 (delete-selection-mode t)
 
 ;; Disable backup files.
-(setq make-backup-files nil)
+(setopt make-backup-files nil)
 
 ;; Prevent tabs at the beginning of lines
-(setq-default indent-tabs-mode nil)
+(setopt indent-tabs-mode nil)
 
 ;; Disable Visual Bell
-(setq visible-bell nil)
+(setopt visible-bell nil)
 
 ;; Don't prompt when changing TAGS files.
-(setq tags-revert-without-query t)
+(setopt tags-revert-without-query t)
 
 ;;Trailing Whitepsace
-(setq-default show-trailing-whitespace nil)
+(setopt show-trailing-whitespace nil)
 (if whitespace-cleanup (add-hook 'before-save-hook 'delete-trailing-whitespace))

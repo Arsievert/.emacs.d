@@ -77,9 +77,9 @@
 
 (use-package magit
   :ensure t
-  :config
-  (setq magit-ediff-dwim-show-on-hunks t)
-  (setq ediff-split-window-function 'split-window-horizontally)
+  :custom
+  (magit-ediff-dwim-show-on-hunks t)
+  (ediff-split-window-function 'split-window-horizontally)
   :bind (("C-x g" . magit-status)))
 
 (use-package transient
@@ -159,7 +159,7 @@
   ;; Optionally configure the register formatting. This improves the register
   ;; preview for `consult-register', `consult-register-load',
   ;; `consult-register-store' and the Emacs built-ins.
-  (setq register-preview-delay 0.5
+  (setopt register-preview-delay 0.5
         register-preview-function #'consult-register-format)
 
   ;; Optionally tweak the register preview window.
@@ -167,7 +167,7 @@
   (advice-add #'register-preview :override #'consult-register-window)
 
   ;; Use Consult to select xref locations with preview
-  (setq xref-show-xrefs-function #'consult-xref
+  (setopt xref-show-xrefs-function #'consult-xref
         xref-show-definitions-function #'consult-xref)
 
   :config
@@ -184,7 +184,7 @@
 
   ;; Optionally configure the narrowing key.
   ;; Both < and C-+ work reasonably well.
-  (setq consult-narrow-key "<")) ;; "C-+"
+  (setopt consult-narrow-key "<")) ;; "C-+"
 
 (use-package embark
   :ensure t
@@ -206,9 +206,9 @@
 
 (use-package wgrep
   :ensure t
-  :init
-  (setq wgrep-auto-save-buffer t
-        wgrep-change-readonly-file t))
+  :custom
+  (wgrep-auto-save-buffer t)
+  (wgrep-change-readonly-file t))
 
 (use-package corfu
   :ensure t
@@ -227,8 +227,8 @@
   :ensure t
   :init
   (evil-mode 1)
-  :config
-  (setq evil-indent-convert-tabs nil))
+  :custom
+  (evil-indent-convert-tabs nil))
 
 (use-package which-key
   :ensure t
@@ -263,6 +263,9 @@
   :ensure t
   :init
   (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t))
+
+(use-package dape
+  :ensure t)
 
 (when (not (or (display-graphic-p) (daemonp)))
   (semantic-mode 1)

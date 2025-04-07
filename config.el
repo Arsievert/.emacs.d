@@ -26,36 +26,36 @@
 
 ;; Terminal-Theme:
 ;; Selected color scheme using Terminal Emacs.
-(setq terminal-theme 'doom-gruvbox)
+(setopt terminal-theme 'doom-gruvbox)
 
 ;; Terminal-Use-Theme-Background:
 ;; 't - use background color as specified by selected terminal theme.
 ;; 'nil - use background color as specified by terminal window.
-(setq terminal-use-theme-background 'nil)
+(setopt terminal-use-theme-background 'nil)
 
 ;; GUI-Theme:
 ;; Selected color scheme when using GUI Emacs.
-(setq gui-theme 'doom-gruvbox)
+(setopt gui-theme 'doom-gruvbox)
 
 ;; Font:
 ;; Faces used when using GUI Emacs.
-(setq font "Fantasque Sans Mono")
+(setopt font "Fantasque Sans Mono")
 
 ;; Font-Height:
 ;; Font size used when using GUI Emacs.
-(setq font-height 135)
+(setopt font-height 150)
 
 ;; Terminal-Mouse
 ;; 1 - enable xterm mouse support.
 ;; 0 - disable xterm mouse support.
-(setq terminal-mouse 0)
+(setopt terminal-mouse 0)
 
 ;; Whitespace-Cleanup:
 ;; 't - remove trailing whitespace automatically.
 ;; 'nil - do not remove trailing whitespace.
-(setq whitespace-cleanup 't)
+(setopt whitespace-cleanup 't)
 
 ;; Custom Modules
 ;; Directory or file which contains additional elisp configurations.
 ;; Wildcard can be used to load multiple files within a directory.
-(setq custom-modules "")
+(setopt custom-modules "")

@@ -264,6 +264,15 @@
   :init
   (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t))
 
+(use-package vterm
+  :ensure t
+  :config
+  (defun new-vterm (name)
+    "Create a new vterm buffer named *vterm-NAME*."
+    (interactive "sName: ")
+    (let ((vterm-buffer-name (format "*vterm-%s*" name)))
+      (vterm))))
+
 (use-package dape
   :ensure t)
 

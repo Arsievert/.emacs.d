@@ -267,11 +267,20 @@
 (use-package vterm
   :ensure t
   :config
-  (defun new-vterm (name)
+  ;; Custom vterm functions
+  (defun vterm-new (name)
     "Create a new vterm buffer named *vterm-NAME*."
     (interactive "sName: ")
     (let ((vterm-buffer-name (format "*vterm-%s*" name)))
-      (vterm))))
+      (vterm)))
+
+  (defun vterm-cleanup ()
+    "Kill all vterm buffers that are not visible."
+    (interactive)
+    (dolist (buf (buffer-list))
+      (when (and (string-prefix-p "*vterm" (buffer-name buf))
+                 (not (get-buffer-window buf)))
+        (kill-buffer buf)))))
 
 (use-package dape
   :ensure t)

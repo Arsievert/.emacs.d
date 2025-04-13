@@ -27,12 +27,12 @@
 ;; C packages and configurations
 (use-package cc-mode
   :ensure nil
-  :hook
-  (c-mode-common . (lambda ()
-                     (c-set-style "linux")
-                     (setopt tab-width 4)
-                     (setopt c-basic-offset 4)
-                     (setopt indent-tabs-mode nil)))
+  :custom
+  (tab-width 4)
+  (c-basic-offset 4)
+  (c-set-style "linux")
+  (indent-tabs-mode nil)
+
   :config
   ;; C function highlighting.
   (font-lock-add-keywords 'c-mode

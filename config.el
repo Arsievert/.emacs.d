@@ -39,11 +39,15 @@
 
 ;; Font:
 ;; Faces used when using GUI Emacs.
-(setopt font "Fantasque Sans Mono")
+(setopt font "Berkeley Mono")
 
 ;; Font-Height:
 ;; Font size used when using GUI Emacs.
 (setopt font-height 150)
+
+;; Ligatures:
+;; Enable or disable ligatures - requires ligature support in selected font
+(setopt ligatures 't)
 
 ;; Terminal-Mouse
 ;; 1 - enable xterm mouse support.

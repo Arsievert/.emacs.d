@@ -41,6 +41,10 @@
 (setopt x-select-enable-clipboard t)
 (setopt x-underline-at-descent-line t)
 
+(when (not (or (display-graphic-p) (daemonp)))
+  (semantic-mode 1)
+  (global-semantic-stickyfunc-mode 1))
+
 ;; Terminal mouse support.
 (xterm-mouse-mode terminal-mouse)
 

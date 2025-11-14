@@ -24,6 +24,11 @@
 
 ;;; Code:
 
+(use-package eglot
+  :config
+  (add-to-list 'eglot-server-programs
+               '((python-mode python-ts-mode) . ("pylsp"))))
+
 ;; C packages and configurations
 (use-package cc-mode
   :ensure nil
@@ -48,4 +53,36 @@
 
 (use-package pyvenv
   :ensure t
-  :hook (python-mode . pyvenv-mode))
+  :hook (python-mode . pyvenv-mode)
+  :config
+  ;; This function automatically activates a .venv directory in the current project root.
+  ;; Usage: M-x activate-venv
+  ;;        Run from anywhere in your project to activate the .venv
+  (defun activate-venv ()
+    "Activate .venv in the current project root"
+    (interactive)
+    ;; Configure directory to root of project
+    (let ((default-directory (locate-dominating-file "." ".git")))
+      (if default-directory
+          (let ((venv (expand-file-name ".venv" default-directory)))
+            (if (file-directory-p venv)
+                (pyvenv-activate venv)))))))
+
+(use-package dape
+  :ensure t)
+
+(use-package copilot
+  :ensure t
+  ;;:hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . 'copilot-accept-completion)
+              ("TAB" . 'copilot-accept-completion)
+              ("C-TAB" . 'copilot-accept-completion-by-word)
+              ("C-<tab>" . 'copilot-accept-completion-by-word)
+              ("C-n" . 'copilot-next-completion)
+              ("C-p" . 'copilot-previous-completion))
+  :config
+  ;; Node.js version 18+ required
+  (setq copilot-node-executable "/usr/bin/node") ; Adjust path as needed
+  (setq copilot-idle-delay 0.5) ; Delay before showing completions
+  (setq copilot-indent-offset-warning-disable t))

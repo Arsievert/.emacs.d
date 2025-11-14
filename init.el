@@ -32,6 +32,7 @@
 
 ;; Load base modules
 (load (concat user-emacs-directory "custom"))
+(load (concat user-emacs-directory "lisp/bootstrap"))
 (load (concat user-emacs-directory "lisp/packages"))
 (load (concat user-emacs-directory "lisp/languages"))
 (load (concat user-emacs-directory "lisp/ui"))

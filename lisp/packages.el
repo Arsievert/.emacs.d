@@ -288,3 +288,19 @@
 (when (not (or (display-graphic-p) (daemonp)))
   (semantic-mode 1)
   (global-semantic-stickyfunc-mode 1))
+
+(use-package copilot
+  :ensure t
+  ;;:hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . 'copilot-accept-completion)
+              ("TAB" . 'copilot-accept-completion)
+              ("C-TAB" . 'copilot-accept-completion-by-word)
+              ("C-<tab>" . 'copilot-accept-completion-by-word)
+              ("C-n" . 'copilot-next-completion)
+              ("C-p" . 'copilot-previous-completion))
+  :config
+  ;; Node.js version 18+ required
+  (setq copilot-node-executable "/usr/bin/node") ; Adjust path as needed
+  (setq copilot-idle-delay 0.5) ; Delay before showing completions
+  (setq copilot-indent-offset-warning-disable t))

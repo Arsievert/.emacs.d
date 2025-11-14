@@ -63,3 +63,16 @@
   (with-current-buffer (get-buffer-create "*update*") (erase-buffer))
   (async-shell-command "cd ~/;
                         ~/.emacs.d/sh/build-emacs;"))
+
+;; This function automatically activates a .venv directory in the current project root.
+;; Usage: M-x activate-venv
+;;        Run from anywhere in your project to activate the .venv
+(defun activate-venv ()
+  "Activate .venv in the current project root"
+  (interactive)
+  ;; Configure directory to root of project
+  (let ((default-directory (locate-dominating-file "." ".git")))
+    (if default-directory
+        (let ((venv (expand-file-name ".venv" default-directory)))
+          (if (file-directory-p venv)
+              (pyvenv-activate venv))))))

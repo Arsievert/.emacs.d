@@ -7,8 +7,6 @@ Top level configs can be changed in 'config.el'.
 ### Fonts
 - Nerd Fonts
  - https://github.com/ryanoasis/nerd-fonts/releases
-- Fantasque Sans Mono
- - https://github.com/belluzj/fantasque-sans/releases
 
 ### MacOS
 - brew tap d12frosted/emacs-plus

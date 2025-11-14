@@ -45,3 +45,7 @@
 ;; Fish shell language
 (use-package fish-mode
   :ensure t)
+
+(use-package pyvenv
+  :ensure t
+  :hook (python-mode . pyvenv-mode))

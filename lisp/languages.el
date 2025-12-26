@@ -86,3 +86,6 @@
   (setq copilot-node-executable "/usr/bin/node") ; Adjust path as needed
   (setq copilot-idle-delay 0.5) ; Delay before showing completions
   (setq copilot-indent-offset-warning-disable t))
+
+(use-package dockerfile-mode
+  :ensure t)

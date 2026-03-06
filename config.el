@@ -43,7 +43,7 @@
 
 ;; Font-Height:
 ;; Font size used when using GUI Emacs.
-(setopt font-height 150)
+(setopt font-height 160)
 
 ;; Ligatures:
 ;; Enable or disable ligatures - requires ligature support in selected font

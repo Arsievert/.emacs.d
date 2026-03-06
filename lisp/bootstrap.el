@@ -1,6 +1,6 @@
 ;;; bootstrap.el    -*- lexical-binding: t -*-
 
-;; Copyright (C) 2025 Austin Sievert
+;; Copyright (C) 2025-2026 Austin Sievert
 
 ;; Author: Austin Sievert <Arsievert1@gmail.com>
 ;; URL: https://github.com/Arsievert/.emacs.d

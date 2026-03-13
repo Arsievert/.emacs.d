@@ -41,9 +41,10 @@
 ;; Faces used when using GUI Emacs.
 (setopt font "Berkeley Mono")
 
-;; Font-Height:
-;; Font size used when using GUI Emacs.
+;; Font options:
+;; Font size and weight used when using GUI Emacs.
 (setopt font-height 160)
+(setopt font-weight 'light)
 
 ;; Ligatures:
 ;; Enable or disable ligatures - requires ligature support in selected font

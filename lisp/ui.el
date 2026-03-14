@@ -71,8 +71,8 @@
   (setopt doom-modeline-buffer-file-name-style 'file-name)
   (setopt doom-modeline-before-update-env-hook nil)
   (setopt doom-modeline-after-update-env-hook nil)
-  (doom-modeline-icon t)
-  (doom-modeline-major-mode-icon t)))
+  (setopt doom-modeline-icon t)
+  (setopt doom-modeline-major-mode-icon t))
 
 (use-package ligature
   :ensure t

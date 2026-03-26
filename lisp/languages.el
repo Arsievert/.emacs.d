@@ -35,7 +35,6 @@
   :ensure nil
   :custom
   (c-basic-offset 4)
-  (indent-tabs-mode nil)
   (c-default-style '((c-mode . "linux") (c++-mode . "linux")))
 
   :hook

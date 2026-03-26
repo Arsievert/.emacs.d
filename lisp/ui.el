@@ -32,9 +32,9 @@
 (setopt inhibit-splash-screen 't)
 
 (set-face-attribute 'default nil
-                    :family font
-                    :weight font-weight
-                    :height font-height)
+                    :family my/font
+                    :weight my/font-weight
+                    :height my/font-height)
 
 (use-package nerd-icons-completion
   :ensure t
@@ -48,9 +48,9 @@
         doom-themes-enable-italic t)
   (if (or (display-graphic-p) (daemonp))
       ;; Use gui-theme for GUI.
-      (load-theme gui-theme t)
+      (load-theme my/gui-theme t)
       ;; Use terminal-theme for terminal.
-      (load-theme terminal-theme t)))
+      (load-theme my/terminal-theme t)))
 
 (use-package doom-modeline
   :ensure t
@@ -140,5 +140,5 @@
 
   ;; Global ligatures (apply to all modes)
   ;; Be conservative with global ligatures to avoid conflicts
-  (when ligatures
+  (when my/ligatures
   (global-ligature-mode t)))

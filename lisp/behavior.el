@@ -26,7 +26,7 @@
 
 ;; Ensure proper background color is used.
 (defun terminal-config ()
-  (unless (or (display-graphic-p) (daemonp) terminal-use-theme-background)
+  (unless (or (display-graphic-p) (daemonp) my/terminal-use-theme-background)
     (set-face-background 'default "unspecified-bg" (selected-frame))))
 
 (add-hook 'window-setup-hook 'terminal-config)
@@ -46,7 +46,7 @@
   (global-semantic-stickyfunc-mode 1))
 
 ;; Terminal mouse support.
-(xterm-mouse-mode terminal-mouse)
+(xterm-mouse-mode my/terminal-mouse)
 
 ;; Smooth Scrolling
 (setopt scroll-margin 0
@@ -72,4 +72,4 @@
 
 ;;Trailing Whitepsace
 (setopt show-trailing-whitespace nil)
-(if whitespace-cleanup (add-hook 'before-save-hook 'delete-trailing-whitespace))
+(if my/whitespace-cleanup (add-hook 'before-save-hook 'delete-trailing-whitespace))

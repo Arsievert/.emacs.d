@@ -136,8 +136,8 @@
    consult-theme :preview-key '(:debounce 0.2 any)
    consult-ripgrep consult-git-grep consult-grep
    consult-bookmark consult-recent-file consult-xref
-   consult--source-bookmark consult--source-file-register
-   consult--source-recent-file consult--source-project-recent-file
+   consult-source-bookmark consult-source-file-register
+   consult-source-recent-file consult-source-project-recent-file
    ;; :preview-key "M-."
    :preview-key '(:debounce 0.4 any))
 
@@ -180,23 +180,23 @@
   :ensure t
   :custom
   (completion-styles '(orderless basic))
-  (completion--category-overrides '((file (styles basic partial-completion)))))
+  (completion-category-overrides '((file (styles basic partial-completion)))))
 
 (use-package evil
   :ensure t
-  :init
+  :config
   (evil-mode 1)
   :custom
   (evil-indent-convert-tabs nil))
 
 (use-package which-key
   :ensure t
-  :init
+  :config
   (which-key-mode 1))
 
 (use-package yasnippet
   :ensure t
-  :init
+  :config
   (yas-global-mode 1)
   :bind
   (;; Rebind important yasnippet actions

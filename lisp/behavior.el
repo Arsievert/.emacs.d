@@ -38,7 +38,7 @@
 
 (add-hook 'after-make-frame-functions 'new-frame-config)
 
-(setopt x-select-enable-clipboard t)
+(setopt select-enable-clipboard t)
 (setopt x-underline-at-descent-line t)
 
 (when (not (or (display-graphic-p) (daemonp)))

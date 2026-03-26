@@ -25,6 +25,7 @@
 ;;; Code:
 
 (use-package eglot
+  :ensure nil
   :config
   (add-to-list 'eglot-server-programs
                '((python-mode python-ts-mode) . ("pylsp"))))
@@ -33,10 +34,12 @@
 (use-package cc-mode
   :ensure nil
   :custom
-  (tab-width 4)
   (c-basic-offset 4)
-  (c-set-style "linux")
   (indent-tabs-mode nil)
+  (c-default-style '((c-mode . "linux") (c++-mode . "linux")))
+
+  :hook
+  (c-mode . (lambda () (setq-local tab-width 4)))
 
   :config
   ;; C function highlighting.

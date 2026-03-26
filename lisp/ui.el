@@ -31,6 +31,11 @@
 
 (setopt inhibit-splash-screen 't)
 
+(set-face-attribute 'default nil
+                    :family font
+                    :weight font-weight
+                    :height font-height)
+
 (use-package nerd-icons-completion
   :ensure t
   :when (or (display-graphic-p) (daemonp))
@@ -49,7 +54,7 @@
 
 (use-package doom-modeline
   :ensure t
-  :init
+  :config
   (doom-modeline-mode)
   (unless after-init-time
     (setopt doom-modeline--old-format mode-line-format)
@@ -103,7 +108,7 @@
       ";;" ";;;"
       "__" "___" "____" "_<" "_>" "_|" "_~" "_-" "_+"
       "www" "wwww"
-      "<=>" "<!--" "-->" "</>" "<//" "/>" "/>"
+      "<=>" "<!--" "-->" "<//" "/>"
       "0x" "0X" "0b" "0B"
       "x:"))
 

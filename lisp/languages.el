@@ -38,7 +38,9 @@
   (c-default-style '((c-mode . "linux") (c++-mode . "linux")))
 
   :hook
-  (c-mode . (lambda () (setq-local tab-width 4)))
+  (c-mode . (lambda ()
+              (setq-local tab-width 4)
+              (setq-local indent-tabs-mode nil)))
 
   :config
   ;; C function highlighting.

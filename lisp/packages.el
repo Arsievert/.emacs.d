@@ -221,7 +221,9 @@
 (use-package eldoc-box
   :ensure t
   :init
-  (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t))
+  (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t)
+  :custom-face
+  (eldoc-box-body ((t (:inherit tooltip)))))
 
 (use-package vterm
   :ensure t

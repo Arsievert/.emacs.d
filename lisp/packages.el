@@ -39,6 +39,7 @@
   :custom
   (magit-ediff-dwim-show-on-hunks t)
   (ediff-split-window-function 'split-window-horizontally)
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
   :bind (("C-x g" . magit-status)))
 
 (use-package transient

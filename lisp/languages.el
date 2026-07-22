@@ -78,5 +78,11 @@
 (use-package dockerfile-mode
   :ensure t)
 
+;; BitBake recipes/classes/appends (local package: lisp/packages/bb-mode.el)
+(use-package bb-mode
+  :ensure nil
+  :load-path "lisp/packages/"
+  :mode ("\\.bb\\'" "\\.bbappend\\'" "\\.bbclass\\'" "\\.inc\\'"))
+
 (use-package yaml-mode
   :ensure t)
